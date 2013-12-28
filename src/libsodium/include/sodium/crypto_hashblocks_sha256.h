@@ -21,7 +21,7 @@ SODIUM_EXPORT
 const char * crypto_hashblocks_sha256_primitive(void);
 
 SODIUM_EXPORT
-int crypto_hashblocks_sha256(unsigned char *,const unsigned char *,unsigned long long);
+int crypto_hashblocks_sha256(unsigned char *,const unsigned char *,uint64_t);
 
 #ifdef __cplusplus
 }

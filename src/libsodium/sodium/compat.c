@@ -21,7 +21,7 @@ extern "C" {
 #undef crypto_hash_sha256_ref
 SODIUM_EXPORT int
 crypto_hash_sha256_ref(unsigned char *out, const unsigned char *in,
-                       unsigned long long inlen)
+                       uint64_t inlen)
 {
     return crypto_hash_sha256(out, in, inlen);
 }
@@ -29,7 +29,7 @@ crypto_hash_sha256_ref(unsigned char *out, const unsigned char *in,
 #undef crypto_hash_sha512_ref
 SODIUM_EXPORT int
 crypto_hash_sha512_ref(unsigned char *out, const unsigned char *in,
-                       unsigned long long inlen)
+                       uint64_t inlen)
 {
     return crypto_hash_sha512(out, in, inlen);
 }
@@ -37,7 +37,7 @@ crypto_hash_sha512_ref(unsigned char *out, const unsigned char *in,
 #undef crypto_auth_hmacsha256_ref
 SODIUM_EXPORT int
 crypto_auth_hmacsha256_ref(unsigned char *out, const unsigned char *in,
-                           unsigned long long inlen, const unsigned char *k)
+                           uint64_t inlen, const unsigned char *k)
 {
     return crypto_auth_hmacsha256(out, in, inlen, k);
 }
@@ -46,7 +46,7 @@ crypto_auth_hmacsha256_ref(unsigned char *out, const unsigned char *in,
 SODIUM_EXPORT int
 crypto_auth_hmacsha256_ref_verify(const unsigned char *h,
                                   const unsigned char *in,
-                                  unsigned long long inlen,
+                                  uint64_t inlen,
                                   const unsigned char *k)
 {
     return crypto_auth_hmacsha256_verify(h, in, inlen, k);
@@ -55,7 +55,7 @@ crypto_auth_hmacsha256_ref_verify(const unsigned char *h,
 #undef crypto_auth_hmacsha512256_ref
 SODIUM_EXPORT int
 crypto_auth_hmacsha512256_ref(unsigned char *out, const unsigned char *in,
-                              unsigned long long inlen, const unsigned char *k)
+                              uint64_t inlen, const unsigned char *k)
 {
     return crypto_auth_hmacsha512256(out, in, inlen, k);
 }
@@ -64,7 +64,7 @@ crypto_auth_hmacsha512256_ref(unsigned char *out, const unsigned char *in,
 SODIUM_EXPORT int
 crypto_auth_hmacsha512256_ref_verify(const unsigned char *h,
                                      const unsigned char *in,
-                                     unsigned long long inlen,
+                                     uint64_t inlen,
                                      const unsigned char *k)
 {
     return crypto_auth_hmacsha512256_verify(h, in, inlen, k);
@@ -91,7 +91,7 @@ crypto_box_curve25519xsalsa20poly1305_ref_beforenm(unsigned char *k,
 SODIUM_EXPORT int
 crypto_box_curve25519xsalsa20poly1305_ref_afternm(unsigned char *c,
                                                   const unsigned char *m,
-                                                  unsigned long long mlen,
+                                                  uint64_t mlen,
                                                   const unsigned char *n,
                                                   const unsigned char *k)
 {
@@ -102,7 +102,7 @@ crypto_box_curve25519xsalsa20poly1305_ref_afternm(unsigned char *c,
 SODIUM_EXPORT int
 crypto_box_curve25519xsalsa20poly1305_ref_open_afternm(unsigned char *m,
                                                        const unsigned char *c,
-                                                       unsigned long long clen,
+                                                       uint64_t clen,
                                                        const unsigned char *n,
                                                        const unsigned char *k)
 {
@@ -113,7 +113,7 @@ crypto_box_curve25519xsalsa20poly1305_ref_open_afternm(unsigned char *m,
 SODIUM_EXPORT int
 crypto_box_curve25519xsalsa20poly1305_ref(unsigned char *c,
                                           const unsigned char *m,
-                                          unsigned long long mlen,
+                                          uint64_t mlen,
                                           const unsigned char *n,
                                           const unsigned char *pk,
                                           const unsigned char *sk)
@@ -125,7 +125,7 @@ crypto_box_curve25519xsalsa20poly1305_ref(unsigned char *c,
 SODIUM_EXPORT int
 crypto_box_curve25519xsalsa20poly1305_ref_open(unsigned char *m,
                                                const unsigned char *c,
-                                               unsigned long long clen,
+                                               uint64_t clen,
                                                const unsigned char *n,
                                                const unsigned char *pk,
                                                const unsigned char *sk)
@@ -167,7 +167,7 @@ crypto_scalarmult_curve25519_donna_c64(unsigned char *q, const unsigned char *n,
 SODIUM_EXPORT int
 crypto_secretbox_xsalsa20poly1305_ref(unsigned char *c,
                                       const unsigned char *m,
-                                      unsigned long long mlen,
+                                      uint64_t mlen,
                                       const unsigned char *n,
                                       const unsigned char *k)
 {
@@ -178,7 +178,7 @@ crypto_secretbox_xsalsa20poly1305_ref(unsigned char *c,
 SODIUM_EXPORT int
 crypto_secretbox_xsalsa20poly1305_ref_open(unsigned char *m,
                                            const unsigned char *c,
-                                           unsigned long long clen,
+                                           uint64_t clen,
                                            const unsigned char *n,
                                            const unsigned char *k)
 {
@@ -202,8 +202,8 @@ crypto_sign_ed25519_ref_keypair(unsigned char *pk, unsigned char *sk)
 
 #undef crypto_sign_ed25519_ref
 SODIUM_EXPORT int
-crypto_sign_ed25519_ref(unsigned char *sm, unsigned long long *smlen,
-                        const unsigned char *m, unsigned long long mlen,
+crypto_sign_ed25519_ref(unsigned char *sm, uint64_t *smlen,
+                        const unsigned char *m, uint64_t mlen,
                         const unsigned char *sk)
 {
     return crypto_sign_ed25519(sm, smlen, m, mlen, sk);
@@ -211,8 +211,8 @@ crypto_sign_ed25519_ref(unsigned char *sm, unsigned long long *smlen,
 
 #undef crypto_sign_ed25519_ref_open
 SODIUM_EXPORT int
-crypto_sign_ed25519_ref_open(unsigned char *m, unsigned long long *mlen,
-                             const unsigned char *sm, unsigned long long smlen,
+crypto_sign_ed25519_ref_open(unsigned char *m, uint64_t *mlen,
+                             const unsigned char *sm, uint64_t smlen,
                              const unsigned char *pk)
 {
     return crypto_sign_ed25519_open(m, mlen, sm, smlen, pk);
@@ -220,7 +220,7 @@ crypto_sign_ed25519_ref_open(unsigned char *m, unsigned long long *mlen,
 
 #undef crypto_stream_xsalsa20_ref
 SODIUM_EXPORT int
-crypto_stream_xsalsa20_ref(unsigned char *c, unsigned long long clen,
+crypto_stream_xsalsa20_ref(unsigned char *c, uint64_t clen,
                            const unsigned char *n, const unsigned char *k)
 {
     return crypto_stream_xsalsa20(c, clen, n, k);
@@ -229,7 +229,7 @@ crypto_stream_xsalsa20_ref(unsigned char *c, unsigned long long clen,
 #undef crypto_stream_xsalsa20_ref_xor
 SODIUM_EXPORT int
 crypto_stream_xsalsa20_ref_xor(unsigned char *c, const unsigned char *m,
-                               unsigned long long mlen, const unsigned char *n,
+                               uint64_t mlen, const unsigned char *n,
                                const unsigned char *k)
 {
     return crypto_stream_xsalsa20_xor(c, m, mlen, n, k);
@@ -253,7 +253,7 @@ crypto_verify_32_ref(const unsigned char *x, const unsigned char *y)
 SODIUM_EXPORT int
 crypto_onetimeauth_poly1305_ref(unsigned char *out,
                                 const unsigned char *in,
-                                unsigned long long inlen,
+                                uint64_t inlen,
                                 const unsigned char *k)
 {
     return crypto_onetimeauth_poly1305(out, in, inlen, k);
@@ -262,7 +262,7 @@ crypto_onetimeauth_poly1305_ref(unsigned char *out,
 #undef crypto_stream_salsa20_amd64_xmm6
 SODIUM_EXPORT int
 crypto_stream_salsa20_amd64_xmm6(unsigned char *c,
-                                 unsigned long long clen,
+                                 uint64_t clen,
                                  const unsigned char *n,
                                  const unsigned char *k)
 {
@@ -272,7 +272,7 @@ crypto_stream_salsa20_amd64_xmm6(unsigned char *c,
 #undef crypto_stream_salsa20_ref
 SODIUM_EXPORT int
 crypto_stream_salsa20_ref(unsigned char *c,
-                          unsigned long long clen,
+                          uint64_t clen,
                           const unsigned char *n,
                           const unsigned char *k)
 {
@@ -283,7 +283,7 @@ crypto_stream_salsa20_ref(unsigned char *c,
 SODIUM_EXPORT int
 crypto_stream_salsa20_amd64_xmm6_xor(unsigned char *c,
                                      const unsigned char *m,
-                                     unsigned long long mlen,
+                                     uint64_t mlen,
                                      const unsigned char *n,
                                      const unsigned char *k)
 {
@@ -294,7 +294,7 @@ crypto_stream_salsa20_amd64_xmm6_xor(unsigned char *c,
 SODIUM_EXPORT int
 crypto_stream_salsa20_ref_xor(unsigned char *c,
                               const unsigned char *m,
-                              unsigned long long mlen,
+                              uint64_t mlen,
                               const unsigned char *n,
                               const unsigned char *k)
 {

@@ -31,12 +31,12 @@ SODIUM_EXPORT
 const char *crypto_stream_primitive(void);
 
 SODIUM_EXPORT
-int crypto_stream(unsigned char *c, unsigned long long clen,
+int crypto_stream(unsigned char *c, uint64_t clen,
                   const unsigned char *n, const unsigned char *k);
 
 SODIUM_EXPORT
 int crypto_stream_xor(unsigned char *c, const unsigned char *m,
-                      unsigned long long mlen, const unsigned char *n,
+                      uint64_t mlen, const unsigned char *n,
                       const unsigned char *k);
 
 #ifdef __cplusplus

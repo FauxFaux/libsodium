@@ -28,7 +28,7 @@ unsigned char h[32];
 int main(void)
 {
   int i;
-  long long pos = 0;
+  int64_t pos = 0;
   for (i = 0;i < 8;++i) in[i] = noncesuffix[i];
   do {
     do {

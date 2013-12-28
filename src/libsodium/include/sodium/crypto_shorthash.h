@@ -24,7 +24,7 @@ const char *crypto_shorthash_primitive(void);
 
 SODIUM_EXPORT
 int crypto_shorthash(unsigned char *out, const unsigned char *in,
-                     unsigned long long inlen, const unsigned char *k);
+                     uint64_t inlen, const unsigned char *k);
 
 #ifdef __cplusplus
 }

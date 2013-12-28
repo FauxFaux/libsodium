@@ -18,7 +18,7 @@ SODIUM_EXPORT
 const char * crypto_hash_sha512_primitive(void);
 
 SODIUM_EXPORT
-int crypto_hash_sha512(unsigned char *,const unsigned char *,unsigned long long);
+int crypto_hash_sha512(unsigned char *,const unsigned char *,uint64_t);
 
 #ifdef __cplusplus
 }

@@ -19,11 +19,11 @@ typedef struct crypto_onetimeauth_poly1305_implementation {
     const char *(*implementation_name)(void);
     int         (*onetimeauth)(unsigned char *out,
                                const unsigned char *in,
-                               unsigned long long inlen,
+                               uint64_t inlen,
                                const unsigned char *k);
     int         (*onetimeauth_verify)(const unsigned char *h,
                                       const unsigned char *in,
-                                      unsigned long long inlen,
+                                      uint64_t inlen,
                                       const unsigned char *k);
 } crypto_onetimeauth_poly1305_implementation;
 
@@ -49,13 +49,13 @@ crypto_onetimeauth_poly1305_implementation *
 SODIUM_EXPORT
 int crypto_onetimeauth_poly1305(unsigned char *out,
                                 const unsigned char *in,
-                                unsigned long long inlen,
+                                uint64_t inlen,
                                 const unsigned char *k);
 
 SODIUM_EXPORT
 int crypto_onetimeauth_poly1305_verify(const unsigned char *h,
                                        const unsigned char *in,
-                                       unsigned long long inlen,
+                                       uint64_t inlen,
                                        const unsigned char *k);
 
 #ifdef __cplusplus

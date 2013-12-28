@@ -29,10 +29,10 @@ SODIUM_EXPORT
 const char * crypto_sign_ed25519_primitive(void);
 
 SODIUM_EXPORT
-int crypto_sign_ed25519(unsigned char *,unsigned long long *,const unsigned char *,unsigned long long,const unsigned char *);
+int crypto_sign_ed25519(unsigned char *,uint64_t *,const unsigned char *,uint64_t,const unsigned char *);
 
 SODIUM_EXPORT
-int crypto_sign_ed25519_open(unsigned char *,unsigned long long *,const unsigned char *,unsigned long long,const unsigned char *);
+int crypto_sign_ed25519_open(unsigned char *,uint64_t *,const unsigned char *,uint64_t,const unsigned char *);
 
 SODIUM_EXPORT
 int crypto_sign_ed25519_keypair(unsigned char *,unsigned char *);

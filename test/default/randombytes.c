@@ -1,11 +1,11 @@
 #include "randombytes.h"
 
 unsigned char x[65536];
-unsigned long long freq[256];
+uint64_t freq[256];
 
 int main(void)
 {
-  unsigned long long i;
+  uint64_t i;
 
   randombytes(x,sizeof x);
   for (i = 0;i < 256;++i) freq[i] = 0;
