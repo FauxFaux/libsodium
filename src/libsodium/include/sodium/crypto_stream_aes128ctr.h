@@ -10,6 +10,7 @@
  */
 
 #include <stddef.h>
+#include <stdint.h>
 #include "export.h"
 
 #define crypto_stream_aes128ctr_KEYBYTES 16U

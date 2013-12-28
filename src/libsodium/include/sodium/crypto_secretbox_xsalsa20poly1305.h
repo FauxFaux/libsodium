@@ -2,6 +2,7 @@
 #define crypto_secretbox_xsalsa20poly1305_H
 
 #include <stddef.h>
+#include <stdint.h>
 #include "export.h"
 
 #define crypto_secretbox_xsalsa20poly1305_KEYBYTES 32U

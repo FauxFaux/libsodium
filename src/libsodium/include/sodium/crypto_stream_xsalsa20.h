@@ -10,6 +10,7 @@
  */
 
 #include <stddef.h>
+#include <stdint.h>
 #include "export.h"
 
 #define crypto_stream_xsalsa20_KEYBYTES 32U

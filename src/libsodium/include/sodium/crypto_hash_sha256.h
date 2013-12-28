@@ -2,6 +2,7 @@
 #define crypto_hash_sha256_H
 
 #include <stddef.h>
+#include <stdint.h>
 #include "export.h"
 
 #define crypto_hash_sha256_BYTES 32U

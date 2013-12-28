@@ -2,6 +2,7 @@
 #define crypto_auth_hmacsha512256_H
 
 #include <stddef.h>
+#include <stdint.h>
 #include "export.h"
 
 #define crypto_auth_hmacsha512256_BYTES 32U

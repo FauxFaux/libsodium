@@ -2,6 +2,7 @@
 #define crypto_sign_ed25519_H
 
 #include <stddef.h>
+#include <stdint.h>
 #include "export.h"
 
 #define crypto_sign_ed25519_SECRETKEYBYTES 64U

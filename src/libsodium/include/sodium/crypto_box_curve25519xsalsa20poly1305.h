@@ -2,6 +2,7 @@
 #define crypto_box_curve25519xsalsa20poly1305_H
 
 #include <stddef.h>
+#include <stdint.h>
 #include "export.h"
 
 #define crypto_box_curve25519xsalsa20poly1305_PUBLICKEYBYTES 32U

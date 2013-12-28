@@ -2,6 +2,7 @@
 #define crypto_hash_sha512_H
 
 #include <stddef.h>
+#include <stdint.h>
 #include "export.h"
 
 #define crypto_hash_sha512_BYTES 64U

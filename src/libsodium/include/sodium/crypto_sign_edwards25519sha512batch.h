@@ -2,6 +2,7 @@
 #define crypto_sign_edwards25519sha512batch_H
 
 #include <stddef.h>
+#include <stdint.h>
 #include "export.h"
 
 #define crypto_sign_edwards25519sha512batch_SECRETKEYBYTES 64U

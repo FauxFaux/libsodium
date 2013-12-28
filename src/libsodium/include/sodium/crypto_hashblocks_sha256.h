@@ -2,6 +2,7 @@
 #define crypto_hashblocks_sha256_H
 
 #include <stddef.h>
+#include <stdint.h>
 #include "export.h"
 
 #define crypto_hashblocks_sha256_STATEBYTES 32U

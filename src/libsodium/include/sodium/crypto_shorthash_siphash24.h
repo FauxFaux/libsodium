@@ -2,6 +2,7 @@
 #define crypto_shorthash_siphash24_H
 
 #include <stddef.h>
+#include <stdint.h>
 #include "export.h"
 
 #define crypto_shorthash_siphash24_BYTES 8U
